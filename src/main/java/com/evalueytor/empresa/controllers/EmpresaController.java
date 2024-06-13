@@ -80,12 +80,13 @@ public class EmpresaController {
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
-    // Crear un nuevo proveedor
+   // Crear un nuevo proveedor
     @PostMapping("/proveedor/save")
     public ResponseEntity<Proveedor> crearProveedor(@RequestBody Proveedor nuevoProveedor) {
-        Proveedor proveedorGuardado = proveedorRepository.save(nuevoProveedor);
-        return new ResponseEntity<>(proveedorGuardado, HttpStatus.CREATED);
-    }
+    Proveedor proveedorGuardado = proveedorRepository.save(nuevoProveedor);
+    return new ResponseEntity<>(proveedorGuardado, HttpStatus.CREATED);
+}
+
 
     // Actualizar proveedor
     @PutMapping("/proveedor/updatebyid/{id}")

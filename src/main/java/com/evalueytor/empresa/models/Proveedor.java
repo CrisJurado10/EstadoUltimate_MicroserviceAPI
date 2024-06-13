@@ -1,12 +1,18 @@
 package com.evalueytor.empresa.models;
 
-
-import lombok.Data;
 import jakarta.persistence.Entity;
 
 @Entity
-@Data
 public class Proveedor extends Empresa {
 
-    private Long calificacion;
+    private Integer calificacion;
+
+    // Getters y Setters
+    public Integer getCalificacion() {
+        return calificacion;
+    }
+
+    public void setCalificacion(Integer calificacion) {
+        this.calificacion = calificacion;
+    }
 }
